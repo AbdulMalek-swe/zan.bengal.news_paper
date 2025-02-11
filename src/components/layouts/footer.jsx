@@ -1,15 +1,15 @@
 import React from "react";
-import image from "../../assets/logo/manobjomoin.jpg"; // Next.js এর জন্য, যদি শুধু React হয় তাহলে img ট্যাগ ব্যবহার করো
+import image from "../../assets/logo/manobjomoin.jpg"; 
 import { FaFacebookF, FaYoutube, FaLinkedinIn } from "react-icons/fa";
 import Image from "next/image";
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-900 text-white py-6 px-4 container-custom ">
-      <div className="container mx-auto flex flex-col lg:flex-row justify-between items-center space-x-10">
+    <footer className="bg-white text-black py-8   container-custom ">
+      <div className=" mx-auto flex flex-col lg:flex-row justify-between items-center lg:gap-40">
         
         {/* Left Side: Logo & Address */}
-        <div className="flex items-start space-x-4">
+        <div className="flex flex-col md:flex-row  md:space-x-4">
           {/* Logo */}
           <div >
             <Image
@@ -20,8 +20,8 @@ const Footer = () => {
             />
           </div>
 
-          {/* Address & Contact */}
-          <div className="text-sm">
+         
+          <div className="text-sm mt-2">
             <p className="font-semibold">প্রধান সম্পাদক: মতিউর রহমান চৌধুরী</p>
             <p>
               জেনিথ টাওয়ার, ৪০ কাওরান বাজার, ঢাকা-১২১৫ এবং মিডিয়া প্রিন্টার্স ১৪৯-১৫০ তেজগাঁও শিল্প এলাকা, ঢাকা-১২০৮ থেকে মাহবুবা চৌধুরী কর্তৃক সম্পাদিত ও প্রকাশিত।
@@ -31,7 +31,7 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Right Side: Social Icons & Text */}
+     
         <div className="mt-6 lg:mt-0 flex flex-col items-center">
           {/* Social Icons */}
           <div className="flex space-x-4">
