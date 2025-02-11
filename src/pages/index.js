@@ -1,114 +1,125 @@
 import Image from "next/image";
-import { Geist, Geist_Mono } from "next/font/google";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 export default function Home() {
-  return (
-    <div
-      className={`${geistSans.variable} ${geistMono.variable} grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]`}
-    >
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/pages/index.js
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+  const newsItems = [
+    {
+      author: "মাহবুব আজিজ",
+      title: "উচ্চারণের বিপরীতে",
+      description: "বুলডোজার শোভাযাত্রা, আইনের শাসন ও নির্বিকার সরকার",
+      image: "/images/img.webp",
+    },
+    {
+      author: "সাক্ষাৎকার নেয়েছেন",
+      title: "সাক্ষাৎকার : খন্দকার মোশাররফ হোসেন",
+      description: "কোনো অনুজ্জ্বল নির্বাচন বিচ্ছিন্ন...",
+      image: "/images/img.webp",
+    },
+    {
+      author: "সাক্ষাৎকার রহমান মানিক",
+      title: "শিক্ষাপ্রণ | ছাত্র সংসদ",
+      description: "নির্বাচনফলে ছাত্র রাজনীতি বরাবর সুপ্রাসঙ্গিক!",
+      image: "/images/img.webp",
+    },
+  ];
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+  const text =
+    "সারাদেশে চলমান অপারেশন ডেভিল হান্টের কথা উল্লেখ করে স্বরাষ্ট্র উপদেষ্টা লেফটেন্যান্ট জেনারেল (অব.) মো. জাহাঙ্গীর আলম চৌধুরী বলেন, কোনো";
+
+  return (
+    <main className="container-custom">
+      <div className="flex gap-4 md:flex-row flex-col items-stretch">
+        {/* Main News Section */}
+        <div className="flex-1 flex flex-col gap-6">
+          {/* Headline News */}
+          <div className="flex border-b pb-4 flex-col md:flex-row gap-4 items-stretch">
+            {/* Text Container */}
+            <div className="flex-1 flex flex-col justify-between h-full">
+              <h1 className="text-xl font-bold text-yellow-600">
+                দুর্নীতি সূচকে দুই ধাপ পেছাল বাংলাদেশ
+              </h1>
+              <p className="mt-2 text-gray-700">
+                {text.length > 145 ? text.slice(0, 145) + "..." : text}
+              </p>
+            </div>
+
+            {/* Image Container */}
+            <div className="w-[350px] h-[200px] flex-shrink-0">
+              <Image
+                src="/images/img.webp"
+                alt="Main News"
+                width={350}
+                height={200}
+                className="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+
+          {/* Grid News */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {[...Array(6)].map((_, index) => (
+              <div key={index} className="border p-3 flex gap-2 items-stretch">
+                <Image
+                  src="/images/img.webp"
+                  alt="News 1"
+                  width={120}
+                  height={75}
+                  className="w-[120px] h-[75px] rounded-lg object-cover"
+                />
+                <h3 className="font-bold mt-2 flex-1">
+                  গাজীপুরে অপারেশন ডেল্টা হ্যান্ড অভিযানে আটক আরও ৮১
+                </h3>
+              </div>
+            ))}
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+
+        {/* Middle News Section */}
+        <div className="flex flex-col space-y-2 w-[300px]">
+          {[...Array(4)].map((_, index) => (
+            <div key={index} className="border p-3 rounded-lg flex items-stretch gap-2">
+              <h3 className="font-bold mt-2 flex-1">
+                ধর্মসভায় অতিথি করা নিয়ে বিরোধে বিএনপি কর্মীকে কুপিয়ে হত্যা
+              </h3>
+              <div className="w-[115px] h-[75px] flex-shrink-0">
+                <Image
+                  src="/images/img.webp"
+                  alt="News Middle 1"
+                  width={115}
+                  height={75}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Sidebar */}
+        <div className="w-[350px] border-t-2 border-yellow-500 py-3">
+          <h2 className="text-xl font-bold border-b pb-2">
+            সম্পাদকীয় ও মতামত
+          </h2>
+          <div className="space-y-6">
+            {newsItems.map((item, index) => (
+              <div key={index} className="flex gap-4 border-b pb-4 items-stretch">
+                <div className="flex-1 flex flex-col justify-between">
+                  <p className="text-sm text-gray-500">{item.author}</p>
+                  <h3 className="font-bold text-red-600">{item.title}</h3>
+                  <p className="text-gray-700">{item.description}</p>
+                </div>
+                <div className="w-[90px] h-[90px] flex-shrink-0">
+                  <Image
+                    src={item.image}
+                    alt={item.title}
+                    width={90}
+                    height={90}
+                    className="rounded object-cover w-full h-full"
+                  />
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </main>
   );
 }
