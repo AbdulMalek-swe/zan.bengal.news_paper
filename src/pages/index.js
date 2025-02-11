@@ -1,3 +1,4 @@
+import HeadlineSlider from "@/components/headline";
 import Image from "next/image";
 
 export default function Home() {
@@ -14,12 +15,6 @@ export default function Home() {
       description: "কোনো অনুজ্জ্বল নির্বাচন বিচ্ছিন্ন...",
       image: "/images/img.webp",
     },
-    {
-      author: "সাক্ষাৎকার রহমান মানিক",
-      title: "শিক্ষাপ্রণ | ছাত্র সংসদ",
-      description: "নির্বাচনফলে ছাত্র রাজনীতি বরাবর সুপ্রাসঙ্গিক!",
-      image: "/images/img.webp",
-    },
   ];
 
   const text =
@@ -27,12 +22,12 @@ export default function Home() {
 
   return (
     <main className="container-custom">
-      <div className="flex gap-4 md:flex-row flex-col items-stretch">
+      <HeadlineSlider/>
+      <div className="flex flex-col lg:flex-row gap-4 border-b h-full">
         {/* Main News Section */}
-        <div className="flex-1 flex flex-col gap-6">
+        <div className="flex-1 flex flex-col gap-4 h-full">
           {/* Headline News */}
-          <div className="flex border-b pb-4 flex-col md:flex-row gap-4 items-stretch">
-            {/* Text Container */}
+          <div className="border-b pb-4 flex flex-col lg:flex-row gap-4 items-stretch">
             <div className="flex-1 flex flex-col justify-between h-full">
               <h1 className="text-xl font-bold text-yellow-600">
                 দুর্নীতি সূচকে দুই ধাপ পেছাল বাংলাদেশ
@@ -43,7 +38,7 @@ export default function Home() {
             </div>
 
             {/* Image Container */}
-            <div className="w-[350px] h-[200px] flex-shrink-0">
+            <div className="w-full lg:w-[350px] h-[200px] flex-shrink-0">
               <Image
                 src="/images/img.webp"
                 alt="Main News"
@@ -55,15 +50,15 @@ export default function Home() {
           </div>
 
           {/* Grid News */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-2 ">
             {[...Array(6)].map((_, index) => (
-              <div key={index} className="border p-3 flex gap-2 items-stretch">
+              <div key={index} className="p-3 flex gap-2 border-b">
                 <Image
                   src="/images/img.webp"
                   alt="News 1"
                   width={120}
                   height={75}
-                  className="w-[120px] h-[75px] rounded-lg object-cover"
+                  className="w-[120px] h-[75px] object-cover"
                 />
                 <h3 className="font-bold mt-2 flex-1">
                   গাজীপুরে অপারেশন ডেল্টা হ্যান্ড অভিযানে আটক আরও ৮১
@@ -74,9 +69,9 @@ export default function Home() {
         </div>
 
         {/* Middle News Section */}
-        <div className="flex flex-col space-y-2 w-[300px]">
-          {[...Array(4)].map((_, index) => (
-            <div key={index} className="border p-3 rounded-lg flex items-stretch gap-2">
+        <div className="flex flex-col lg:w-1/4 w-full self-stretch">
+          {[...Array(6)].map((_, index) => (
+            <div key={index} className="border-b p-3 flex items-stretch gap-2">
               <h3 className="font-bold mt-2 flex-1">
                 ধর্মসভায় অতিথি করা নিয়ে বিরোধে বিএনপি কর্মীকে কুপিয়ে হত্যা
               </h3>
@@ -94,13 +89,37 @@ export default function Home() {
         </div>
 
         {/* Sidebar */}
-        <div className="w-[350px] border-t-2 border-yellow-500 py-3">
-          <h2 className="text-xl font-bold border-b pb-2">
-            সম্পাদকীয় ও মতামত
-          </h2>
-          <div className="space-y-6">
+        <div className="flex flex-col border-t-2 border-yellow-500 py-3 lg:w-1/4 w-full">
+          <h2 className="text-xl font-bold border-b pb-2">সম্পাদকীয় ও মতামত</h2>
+
+          {/* Featured Article */}
+          <div className="flex flex-col items-start pb-4 mb-4 border-b">
+            <div className="w-full flex justify-center">
+              <Image
+                src="/images/img.webp"
+                alt="Author Illustration"
+                width={250}
+                height={250}
+                className="object-contain"
+              />
+            </div>
+
+            <p className="text-sm text-[#C1873E] font-semibold mt-2 flex items-center">
+              <span className="text-xl mr-1">↗</span> মাহবুব আজিজ
+            </p>
+
+            <h2 className="text-lg font-bold text-red-600">
+              উচ্চারণের বিপরীতে
+              <span className="text-yellow-600"> / বুলডোজার শোভাযাত্রা,</span>
+            </h2>
+
+            <p className="text-yellow-600">আইনের শাসন ও নির্বিকার সরকার</p>
+          </div>
+
+          {/* Additional Articles */}
+          <div className="space-y-6 flex-1">
             {newsItems.map((item, index) => (
-              <div key={index} className="flex gap-4 border-b pb-4 items-stretch">
+              <div key={index} className="flex gap-4 border-b pb-4">
                 <div className="flex-1 flex flex-col justify-between">
                   <p className="text-sm text-gray-500">{item.author}</p>
                   <h3 className="font-bold text-red-600">{item.title}</h3>
