@@ -1,4 +1,6 @@
 import HeadlineSlider from "@/components/headline";
+import NewsLayout from "@/components/news-layout";
+import VideoSection from "@/components/youtube-video";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -140,6 +142,13 @@ export default function Home() {
           </div>
         </div>
       </div>
+
+      {/* video section */}
+      <VideoSection/>
+
+
+      {/* Category section */}
+      <NewsLayout/>
     </main>
   );
 }
