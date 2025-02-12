@@ -1,7 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
-import YouTube from "react-youtube";
+import { MdKeyboardDoubleArrowRight } from "react-icons/md";
+import { NewsCart, NewsSingleCart } from "./components/new-cart";
 
 const VideoGallery = () => {
   const [categoryName, setCategroyName] = useState("স্বাস্থ্য");
@@ -35,7 +36,6 @@ const VideoGallery = () => {
       category_name: "পরিবেশ",
     },
   ];
- 
 
   const onPlay = () => setPlaying(true);
   return (
@@ -93,10 +93,39 @@ const VideoGallery = () => {
           </div>
         </div>
       </section>
-      <div className="relative w-full max-w-2xl">
-      {/* YouTube Video */}
-       
-    </div>
+      <section className="space-y-4 py-5">
+        <div>
+          <Link
+            className="hover:text-[#FF8C00] flex items-center gap-1 font-medium text-3xl  border-b my-5"
+            href={"/"}
+          >
+            {" "}
+            <div className="flex items-center gap-2 pb-1 border-b-4 border-[#FF8C00]">
+              <span className="  font-medium text-2xl">Video</span>
+              <MdKeyboardDoubleArrowRight className="text-[#FF8C00] text-3xl" />
+            </div>
+            {/* <div className="border-b  p-2"></div> */}
+          </Link>
+
+          <div className="grid grid-cols-12 gap-4 ">
+            {/* First card - Spanning 2 columns */}
+            <div className="col-span-6 border-b  ">
+              <div>
+              <NewsCart />
+              </div>
+              
+            </div>
+
+            {/* Second and Third cards - Normal size */}
+            <div className="col-span-3 border-b">
+              <NewsSingleCart />
+            </div>
+            <div className="col-span-3 border-b">
+              <NewsSingleCart />
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 };
