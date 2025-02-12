@@ -2,20 +2,20 @@ import React from "react";
 import image from "../../assets/logo/manobjomoin.jpg";
 import { FaFacebookF, FaYoutube, FaLinkedinIn } from "react-icons/fa";
 import Image from "next/image";
+import Link from "next/link";
 
 const Footer = () => {
   return (
     <footer className="bg-white text-black py-8   container-custom ">
       <div className=" mx-auto flex flex-col lg:flex-row justify-between items-center lg:gap-40">
         {/* Left Side: Logo & Address */}
-        <div className="flex flex-col md:flex-row  md:space-x-4">
+        <div className="flex items-center   gap-4 justify-between md:flex-row  md:space-x-4">
           {/* Logo */}
-          <div>
-            <Image src={image} alt="Logo" width={150} height={150} />
-          </div>
+          <Link href="/">
+            <Image src={image} alt="Logo" width={190} height={150} />
+          </Link>
 
-          <div className="text-sm mt-2">
-            <p className="font-semibold"></p>
+          <div className=" text-sm">
             <p>
               প্রধান কার্যালয়: ২১৪/বি, ১ম তলা, বক্স কালভার্ট রোড, ফকিরাপুল,
               মতিঝিল, ঢাকা-১০০০

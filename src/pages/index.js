@@ -169,20 +169,15 @@ export default function Home() {
             </Link>
           ))}
         </div>
-
         {/* Sidebar */}
         {/* facebook use here  */}
         <div >
-
           <FacebookPage/>
         </div>
-
       </div>
-
       {/* video section */}
       <VideoSection/>
-
-
+      sdfsdfsd
       {/* Category section */}
       <NewsLayout/>
       <Entertainment/>
