@@ -33,15 +33,15 @@ const Navber = () => {
 
   const menuData = [
     { name: "সর্বশেষ", url: "/latest-news" },
-    { name: "বাংলাদেশ", url: "/todays-newspaper" },
-    { name: "রাজনীতি", url: "/print-version" },
-    { name: "সারাদেশ", url: "/sports" },
-    { name: "আন্তর্জাতিক", url: "/world" },
-    { name: "অর্থ-বাণিজ্য", url: "/business" },
-    { name: "খেলাধুলা", url: "/sports" },
-    { name: "বিনোদন", url: "/entertainment" },
-    { name: "স্বাস্থ্য", url: "/health" },
-    { name: "শিক্ষা", url: "/education" },
+    { name: "বাংলাদেশ", url: "/news-category/todays-newspaper" },
+    { name: "রাজনীতি", url: "/news-category/print-version" },
+    { name: "সারাদেশ", url: "/news-category/sports" },
+    { name: "আন্তর্জাতিক", url: "/news-category/world" },
+    { name: "অর্থ-বাণিজ্য", url: "/news-category/business" },
+    { name: "খেলাধুলা", url: "/news-category/sports" },
+    { name: "বিনোদন", url: "/news-category/entertainment" },
+    { name: "স্বাস্থ্য", url: "/news-category/health" },
+    { name: "শিক্ষা", url: "/news-category/education" },
   ];
 
   const CategoryData = [
