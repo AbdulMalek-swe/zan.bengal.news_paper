@@ -2,11 +2,12 @@
 import React, { useEffect, useState, useLayoutEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { FaLocationDot } from "react-icons/fa6";
+import { MdDateRange } from "react-icons/md";
 import {
   FaBars,
   FaChevronDown,
   FaFacebookF,
-  FaSearch,
   FaTimes,
   FaYoutube,
   FaLinkedinIn,
@@ -60,47 +61,9 @@ const Navber = () => {
 
   return (
     <main>
-      {/* 🔹 Top Navbar (Mobile) */}
-      <div className=" flex  items-center justify-between p-2 md:hidden">
-        <Image
-          className="w-14 h-12 rounded-sm"
-          src={Logo1}
-          alt="Profile Picture"
-          width={30}
-          height={30}
-        />
-
-        <div className="relative w-36">
-          <input
-            type="text"
-            placeholder="Search..."
-            className="w-full p-2 pl-10 pr-4 rounded-md text-white border border-gray-600 focus:outline-none"
-          />
-          <FaSearch className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" />
-        </div>
-      </div>
-
-      {/* 🔹 Mobile Menu */}
-      <div className="lg:hidden mt-1 flex items-center justify-between p-3 gap-4">
-        <button onClick={toggleSidebar} className="text-gray-700 text-3xl">
-          <FaBars />
-        </button>
-        <div className="flex space-x-4 overflow-x-auto scrollbar-hide">
-          {CategoryData.map((item, index) => (
-            <Link
-              key={index}
-              href={item.url}
-              className="whitespace-nowrap border-e-2 lg:border-none px-3 py-1 text-sm transition pb-3"
-            >
-              {item.name}
-            </Link>
-          ))}
-        </div>
-      </div>
-
       {/* 🔹 Header (Logo & Date) */}
       <div className="flex items-center container-custom justify-between px-4 pb-2 mt-3">
-        <div className="text-center flex-1 hidden md:block">
+        <div className="text-center flex-1 px-2">
           <Image
             className="mx-auto "
             src={logo}
@@ -108,19 +71,39 @@ const Navber = () => {
             width={400}
             height={200}
           />
-          <p className="mt-2 text-sm">
-            ঢাকা, ১১ ফেব্রুয়ারি ২০২৫, মঙ্গলবার, ২৮ মাঘ ১৪৩১ বঙ্গাব্দ, ১১ শাবান
+          <p className="mt-2 hidden md:block text-sm">
+            ঢাকা,  মঙ্গলবার, ১১ ফেব্রুয়ারি ২০২৫, ২৮ মাঘ ১৪৩১ বঙ্গাব্দ, ১১ শাবান
             ১৪৪৬ হিঃ
+          </p>
+          <p className="mt-2 md:hidden flex items-center justify-center gap-1 text-sm">
+            <FaLocationDot />
+            ঢাকা, <MdDateRange /> মঙ্গলবার, ১১ ফেব্রুয়ারি ২০২৫
           </p>
         </div>
       </div>
-
+      {/* 🔹 Mobile Menu */}
+      <div className="lg:hidden  flex items-center justify-between py-3 px-3  gap-4">
+        <button onClick={toggleSidebar} className="text-gray-700 text-3xl">
+          <FaBars className="border p-1 text-green-500" />
+        </button>
+        <div className="flex space-x-1 overflow-x-auto scrollbar-hide">
+          {menuData.slice(0, 5).map((item, index) => (
+            <Link
+              key={index}
+              href={item.url}
+              className="whitespace-nowrap border-e-2 text-[17px] lg:border-none px-2  text-sm transition py-2"
+            >
+              {item.name}
+            </Link>
+          ))}
+        </div>
+      </div>
       {/* 🔹 Main Navbar */}
       <nav
         className={` transition-all  duration-300 ${
           isScrolled
             ? "fixed top-0 left-0 w-full bg-white z-50 shadow-md"
-            : "md:bg-base-200 p-2"
+            : "md:bg-base-200 py-1 md:p-2"
         }`}
       >
         <div

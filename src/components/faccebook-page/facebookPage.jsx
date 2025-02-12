@@ -33,7 +33,7 @@ const FacebookPage = () => {
         className="fb-page"
         data-href="https://www.facebook.com/Bengalchannel24.bd/" // Replace with your Facebook page URL
         data-tabs="timeline"
-        data-width="500"
+        data-width="300"
         data-height="600"
         data-small-header="false"
         data-adapt-container-width="true"
