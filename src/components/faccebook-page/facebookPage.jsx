@@ -1,6 +1,7 @@
 "use client";
 import { publicRequest } from "@/config/axios.config";
 import axios from "axios";
+import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 import {
   Comments,
@@ -10,7 +11,7 @@ import {
 } from "react-facebook";
 
 const FacebookPage = () => {
-  const [pageData, setPageData] = useState(null);
+  // const [pageData, setPageData] = useState(null);
   //   const pageId = "102255664767812"; // Replace with your Page ID
   //   const accessToken =
   //     "EAAJD3fG1KiABO6I4j7pShCCVO9CwODMzfZALOfQbzzOy5GbkkYOecxNLkmZBqbjQkv4xED6tQVjBEANpJAukrLl8sPuy6dUvQpe3SvzOcFC9pTPiJO6VTgsTGCf33pUTVMLYOabsdSxvnOTMVV4bXfAKUZCaUmkduZBSeSRiahsWZAfaO2579UDOx4TFZA64bsAhBx6upGVDs4QBSkxkUdl3zRZArJGR0rlIeYDim4ZAK48ZD";
@@ -94,7 +95,8 @@ const FacebookPage = () => {
 
   //     fetchPosts();
   //   }, []);
-
+const router = useRouter();
+console.log(router?.route,"my router my rules");
   useEffect(() => {
     // Load Facebook SDK script
     window.fbAsyncInit = function () {
@@ -115,7 +117,7 @@ const FacebookPage = () => {
       js.src = "https://connect.facebook.net/en_US/sdk.js";
       fjs.parentNode.insertBefore(js, fjs);
     })(document, "script", "facebook-jssdk");
-  }, []);
+  }, [router?.route]);
   return (
     <div>
       <div
