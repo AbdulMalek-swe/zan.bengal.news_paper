@@ -30,13 +30,13 @@ export default function HeadlineSlider() {
       >
         {headlines.map((headline, index) => (
           <SwiperSlide key={index}>
-            <p className="text-black px-4 py-2">{headline}</p>
+            <p className="text-black text-sm md:text-base px-4 py-2">{headline}</p>
           </SwiperSlide>
         ))}
       </Swiper>
 
       {/* Navigation Buttons (Right Side) */}
-      <div className="flex items-center space-x-1 bg-white px-2">
+      <div className="items-center space-x-1 hidden md:flex bg-white px-2">
         <button
           onClick={() => swiperRef.current?.slidePrev()}
           className="p-2 hover:bg-gray-200 rounded"

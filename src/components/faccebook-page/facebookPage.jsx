@@ -2,12 +2,7 @@
 import { publicRequest } from "@/config/axios.config";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import {
-  Comments,
-  FacebookProvider,
-  Like,
-  FacebookLogin,
-} from "react-facebook";
+
 
 const FacebookPage = () => {
   const [pageData, setPageData] = useState(null);
@@ -122,7 +117,7 @@ const FacebookPage = () => {
         className="fb-page"
         data-href="https://www.facebook.com/Bengalchannel24.bd/" // Replace with your Facebook page URL
         data-tabs="timeline"
-        data-width="500"
+        data-width="300"
         data-height="600"
         data-small-header="false"
         data-adapt-container-width="true"
