@@ -2,12 +2,12 @@
 import { publicRequest } from "@/config/axios.config";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import {
-  Comments,
-  FacebookProvider,
-  Like,
-  FacebookLogin,
-} from "react-facebook";
+// import {
+//   Comments,
+//   FacebookProvider,
+//   Like,
+//   FacebookLogin,
+// } from "react-facebook";
 
 const FacebookPage = () => {
   const [pageData, setPageData] = useState(null);

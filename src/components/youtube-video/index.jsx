@@ -11,26 +11,36 @@ import "swiper/css/pagination";
 import Link from "next/link";
 
 const videos = [
-  { id: 1, title: "ব্যাংকে ইমরুল-মোদি বৈঠক?", thumbnail: "/images/img.webp" },
-  { id: 2, title: "বেনজীরকে নিয়ে নতুন করে...", thumbnail: "/images/img.webp" },
+  { id: 1, title: "ব্যাংকে ইমরুল-মোদি বৈঠক?", thumbnail: "/images/younus.GIF" },
+  { id: 2, title: "বেনজীরকে নিয়ে নতুন করে...", thumbnail: "/images/sakib.GIF" },
   {
     id: 3,
     title: "যেভাবে তৈরি হয় মানিকগঞ্জের...",
-    thumbnail: "/images/img.webp",
+    thumbnail: "/images/muslime.GIF",
   },
   {
     id: 4,
     title: "ভিডিও পরিচালকের দুর্ঘটনার ডাকাতি...",
-    thumbnail: "/images/img.webp",
+    thumbnail: "/images/sosi.GIF",
   },
   {
     id: 5,
     title: "তারেক-কন্যা জাইমা রাজনীতিতে আসছেন?",
-    thumbnail: "/images/img.webp",
+    thumbnail: "/images/mahmudul.GIF",
   },
-  { id: 6, title: "ব্যাংকে ইমরুল-মোদি বৈঠক?", thumbnail: "/images/img.webp" },
-  { id: 7, title: "মনে তো কত মানুষই থাকে...", thumbnail: "/images/img.webp" },
+  { id: 6, title: "ব্যাংকে ইমরুল-মোদি বৈঠক?", thumbnail: "/images/mahfuz.GIF" },
+  { id: 7, title: "মনে তো কত মানুষই থাকে...", thumbnail: "/images/pahartoli.GIF" },
 ];
+
+const video = [
+  { id: 1, title: "ব্যাংকে ইমরুল-মোদি বৈঠক?", thumbnail: "/images/julai1.GIF" },
+  { id: 2, title: "বেনজীরকে নিয়ে নতুন করে...", thumbnail: "/images/muslime.GIF" },
+  {
+    id: 3,
+    title: "যেভাবে তৈরি হয় মানিকগঞ্জের...",
+    thumbnail: "/images/mahfuz.GIF",
+  },
+]
 
 const VideoSection = () => {
   const swiperRef = useRef(null); // Reference for Swiper instance
@@ -48,11 +58,11 @@ const VideoSection = () => {
       {/* Video Grid */}
       <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-4 mt-4">
         {/* Main Video */}
-        {videos.slice(0, 3).map((data, index) => (
+        {video.map((data, index) => (
           <Link href={""} className="relative">
             <img
-              src={videos[0].thumbnail}
-              alt={videos[0].title}
+              src={data.thumbnail}
+              // alt={videos[0].title}
               className="w-full h-60 object-cover rounded-lg"
             />
             <div className="absolute inset-0 flex justify-center items-center">

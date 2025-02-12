@@ -5,25 +5,25 @@ import Link from "next/link";
 const articles = [
   {
     id: 1,
-    title: "আমাদের মস্তিষ্কে রিল-শর্টসের কতটা প্রভাব ফেলেছে জানেন?",
+    title: "শিশুর ডায়াপারের খরচ কমানোর উপায়",
     description:
-      "বর্তমানে এমন মানুষ কি খুঁজে পাওয়া যাবে যে, সোশ্যাল মিডিয়া ফেসবুক, ইনস্টাগ্রাম বা ইউটিউবে রিল বা শর্টস দেখা ছাড়া একটি দিন কাটিয়েছেন?",
-    image: "/images/img.webp",
+      "বাড়ির নবীনতম সদস্যটির বয়স যতই কম হোক না কেন, তার জন্যও থাকে আলাদা খরচ। শহুরে মা-বাবার একটা বড় খরচ হয় ডায়াপার কিনতে। আধুনিক জীবনধারায় শিশুর জন্য প্রয়োজনীয় এক অনুষঙ্গ ডায়াপার।",
+    image: "/images/baby.GIF",
     time: "১১ ফেব্রুয়ারি ২০২৫, ০২:৩৬ পিএম",
   },
 ];
 
 const sidebarArticles = [
-  { id: 2, title: "আজ ‘প্রমিস ডে’, প্রতিজ্ঞা করার দিন", image: "/images/img.webp" },
-  { id: 3, title: "হেসব কারণে দেখে বাঁধে যৌনরোগ", image: "/images/img.webp" },
-  { id: 4, title: "শিশুরা হেসব কারণে ক্যানসারে আক্রান্ত হয়", image: "/images/img.webp" },
-  { id: 5, title: "জরায়ু ক্যানসারে আক্রান্ত কি না বুঝে নিন ৯ লক্ষণ", image: "/images/img.webp" },
+  { id: 2, title: "আজ ‘প্রমিস ডে’, প্রতিজ্ঞা করার দিন", image: "/images/promise.GIF" },
+  { id: 3, title: "হেসব কারণে দেখে বাঁধে যৌনরোগ", image: "/images/rog.GIF" },
+  { id: 4, title: "শিশুরা হেসব কারণে ক্যানসারে আক্রান্ত হয়", image: "/images/babyy.GIF" },
+  { id: 5, title: "নারী নাকি পুরুষ বেশি কথা বলেন?", image: "/images/kotha.GIF" },
 ];
 
 const rightFeature = {
   id: 6,
-  title: "নারী নাকি পুরুষ বেশি কথা বলেন?",
-  image: "/images/img.webp",
+  title: "আমাদের মস্তিষ্কে রিল-শর্টসের কতটা প্রভাব ফেলে জানেন?",
+  image: "/images/rells.GIF",
 };
 
 export const NewsLayout = () => {
@@ -98,12 +98,12 @@ export const Entertainment = () => {
       
       <div className="md:col-span-2 p-4 rounded-md">
       <div className="flex items-center gap-2 text-lg font-bold mb-4">
-        <span className="bg-red-500 text-white px-3 py-1 rounded">লাইফস্টাইল</span>
+        <span className="bg-red-500 text-white px-3 py-1 rounded">বিনোদন</span>
         <FaChevronDown className="text-red-500" />
       </div>
         <div className="relative w-full h-96 mb-3">
           <Image
-            src="/images/img.webp"
+            src="/images/sakib.GIF"
             alt="Main News"
             fill
             className="rounded-md object-cover"
@@ -118,15 +118,15 @@ export const Entertainment = () => {
         <h2 className="text-lg font-bold mb-3">Trending</h2>
         <div className="space-y-4">
           <div className="flex space-x-3">
-            <Image src="/images/img.webp" width={80} height={80} className="rounded-md" alt="News" />
+            <Image src="/images/asif.GIF" width={80} height={80} className="rounded-md" alt="News" />
             <div>
-              <h4 className="font-medium">কারিয়ের আনন্দের দিন</h4>
+              <h4 className="font-medium">অনেকদিন পর বেক্কল হয়ে গেলাম: আসিফ</h4>
             </div>
           </div>
           <div className="flex space-x-3">
-            <Image src="/side-2.jpg" width={80} height={80} className="rounded-md" alt="News" />
+            <Image src="/images/bubli.GIF" width={80} height={80} className="rounded-md" alt="News" />
             <div>
-              <h4 className="font-medium">ভ্রম ধ্বিজের দিনশেষে</h4>
+              <h4 className="font-medium">অহংকার করা মোটেই ঠিক নয়: বুবলী</h4>
             </div>
           </div>
         </div>
@@ -135,20 +135,20 @@ export const Entertainment = () => {
       {/* Bottom News Cards */}
       <div className="md:col-span-3 grid grid-cols-2 md:grid-cols-4 gap-4">
         <div className="bg-white shadow p-3 rounded-md">
-          <Image src="/small-1.jpg" width={150} height={100} className="rounded-md" alt="News" />
-          <h4 className="text-sm mt-2">'হেয়ারার যদি আদনান তারিখের সন্ধান'</h4>
+          <Image src="/images/card1.GIF" width={150} height={100} className="rounded-md" alt="News" />
+          <h4 className="text-sm mt-2">'৬ তারকার নাচের দাম'</h4>
         </div>
         <div className="bg-white shadow p-3 rounded-md">
-          <Image src="/small-2.jpg" width={150} height={100} className="rounded-md" alt="News" />
+          <Image src="/images/shirt.GIF" width={150} height={100} className="rounded-md" alt="News" />
           <h4 className="text-sm mt-2">গানে কিমারন সাবিনা ইয়াসমিন</h4>
         </div>
         <div className="bg-white shadow p-3 rounded-md">
-          <Image src="/small-3.jpg" width={150} height={100} className="rounded-md" alt="News" />
-          <h4 className="text-sm mt-2">এক নতুন, জিরাপিক ঐতিহাসিক...</h4>
+          <Image src="/images/konok.GIF" width={150} height={100} className="rounded-md" alt="News" />
+          <h4 className="text-sm mt-2">ভুল ধরিয়ে দিলেন কনকচাঁপা</h4>
         </div>
         <div className="bg-white shadow p-3 rounded-md">
-          <Image src="/small-4.jpg" width={150} height={100} className="rounded-md" alt="News" />
-          <h4 className="text-sm mt-2">ট্রেন্ডিং টপিকস</h4>
+          <Image src="/images/black.GIF" width={150} height={100} className="rounded-md" alt="News" />
+          <h4 className="text-sm mt-2">দুর্বল প্যারেন্টিংয়ের ফাঁদে আগামী প্রজন্ম</h4>
         </div>
       </div>
     </div>

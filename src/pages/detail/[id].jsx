@@ -86,15 +86,17 @@ export default function NewsDetail() {
 
         {/* Sidebar - Related News */}
         <div className=" border  p-4 md:mt-40  ">
-        <div className="flex items-center w-full">
-  <div className="flex-1 border-t border-gray-300"></div>
-  <div className="mx-3 flex items-center gap-2">
-  <span className="w-2 h-2 bg-orange-500 rounded-full"></span>
-    <span className="text-lg font-semibold text-gray-800">সর্বশেষ</span>
-    <span className="w-2 h-2 bg-orange-500 rounded-full"></span>
-  </div>
-  <div className="flex-1 border-t border-gray-300"></div>
-</div>
+          <div className="flex items-center w-full">
+            <div className="flex-1 border-t border-gray-300"></div>
+            <div className="mx-3 flex items-center gap-2">
+              <span className="w-2 h-2 bg-orange-500 rounded-full"></span>
+              <span className="text-lg font-semibold text-gray-800">
+                সর্বশেষ
+              </span>
+              <span className="w-2 h-2 bg-orange-500 rounded-full"></span>
+            </div>
+            <div className="flex-1 border-t border-gray-300"></div>
+          </div>
 
           <div className="space-y-4 max-h-96 overflow-y-auto">
             {[...Array(10)].map((_, index) => (
