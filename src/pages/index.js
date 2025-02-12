@@ -177,6 +177,7 @@ export default function Home() {
       </div>
       {/* video section */}
       <VideoSection/>
+      sdfsdfsd
       {/* Category section */}
       <NewsLayout/>
       <Entertainment/>
