@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
+import YouTube from "react-youtube";
 
 const VideoGallery = () => {
   const [categoryName, setCategroyName] = useState("স্বাস্থ্য");
@@ -34,6 +35,9 @@ const VideoGallery = () => {
       category_name: "পরিবেশ",
     },
   ];
+ 
+
+  const onPlay = () => setPlaying(true);
   return (
     <div className="container-custom">
       <section>
@@ -53,40 +57,46 @@ const VideoGallery = () => {
       </section>
       {/* Add your video  gallery*/}
       <section className="grid grid-cols-2 gap-4 ">
-        <Link
-          href={"/welcome"}
-          className="w-full  group aspect-video"
-        >
-          <Image
-            src="/category_image/category.webp"
-            width={800}
-            height={450}
-            className="w-full h-full aspect-video"
-          />
-          <p className="group-hover:text-[#FF8C00] pt-2 px-2">
-            জুলাই শহীদ পরিবারের চাকরি নতুন কোটা হিসেবে যুক্ত হবে না: উপদেষ্টা
-            নাহিদ
-          </p>
-        </Link>
-        <div className="w-1/2">
-          {[1, 2].map((news, ind) => (
-            <Link href={"/welcome"} className="w-1/2 bg-gray-50 group aspect-video">
-              <Image
-                src="/category_image/category.webp"
-                width={800}
-                height={450}
-                className="w-full  aspect-video"
-              />
-              <p className="group-hover:text-[#FF8C00] pt-2 px-2">
-                জুলাই শহীদ পরিবারের চাকরি ন 
-              </p>
-             
-            </Link>
-          ))}
+        <div className="bg-gray-100 ">
+          <Link
+            href={"/welcome"}
+            className="w-full  group aspect-video    block"
+          >
+            <Image
+              src="/category_image/category.webp"
+              width={800}
+              height={450}
+              className="  "
+            />
+            <p className="group-hover:text-[#FF8C00] pt-2 px-2">
+              জুলাই শহীদ পরিবারের চাকরি নতুন কোটা হিসেবে যুক্ত হবে না: উপদেষ্টা
+              নাহিদ
+            </p>
+          </Link>
+        </div>
+
+        <div className="w-1/2  ">
+          <div className="space-y-2">
+            {[1, 2].map((news, ind) => (
+              <Link href={"/welcome"} className=" block bg-gray-100  group  ">
+                <Image
+                  src="/category_image/category.webp"
+                  width={800}
+                  height={450}
+                  className=" "
+                />
+                <p className="group-hover:text-[#FF8C00]   py-2 px-2 ">
+                  জুলাই শহীদ পরিবারের চাকরি ন
+                </p>
+              </Link>
+            ))}
+          </div>
         </div>
       </section>
-      {/* Add your video  gallery*/}
-      {/* <iframe width="560" height="315" src="https://www.youtube.com/embed/QyRRrKQP7fo?si=4uFRV9ynIw1xYJ5u" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> */}
+      <div className="relative w-full max-w-2xl">
+      {/* YouTube Video */}
+       
+    </div>
     </div>
   );
 };

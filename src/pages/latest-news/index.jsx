@@ -13,6 +13,15 @@ const LatestNews = () => {
             className="p-2 pb-5 group flex gap-4 border-b items-center"
             key={i}
           >
+             <div className="aspect-video w-full">
+              <Image
+                src={"/images/img.webp"}
+                alt="loading"
+                width={800}
+                height={450}
+                className="rounded-lg w-full"
+              />
+            </div>
             <div className="w-full">
               <span className="text-[#FF8C00] block pb-3 text-sm">সারাদেশ</span>
               <h2 className="text-gray-600 group-hover:text-[#FF8C00]   pb-4 text-base md:text-xl">
@@ -27,15 +36,7 @@ const LatestNews = () => {
                 আপডেটঃ ১১ ফেব্রুয়ারি ২০২৫ | ১৪:২৪
               </span>
             </div>
-            <div className="aspect-video w-full">
-              <Image
-                src={"/images/img.webp"}
-                alt="loading"
-                width={800}
-                height={450}
-                className="rounded-lg w-full"
-              />
-            </div>
+           
           </Link>
         ))}
 
