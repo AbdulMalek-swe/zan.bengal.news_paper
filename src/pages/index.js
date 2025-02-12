@@ -134,7 +134,7 @@ export default function Home() {
           {/* Grid News */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-2 ">
             {mainnews.map((item, index) => (
-              <Link href={""} key={index} className="p-3 flex gap-2 border-b">
+              <Link href={"/detail/1"} key={index} className="p-3 flex gap-2 border-b">
                 <Image
                   src={item?.image}
                   alt="News 1"
@@ -153,7 +153,7 @@ export default function Home() {
         {/* Middle News Section */}
         <div className="flex flex-col lg:w-1/4 w-full self-stretch">
           {leadnews.map((item, index) => (
-            <Link href={""} key={index} className="border-b p-3 flex items-stretch gap-2">
+            <Link href={"/detail/1"} key={index} className="border-b p-3 flex items-stretch gap-2">
               <h3 className="font-bold mt-2 flex-1">
                 {item?.title}
               </h3>
