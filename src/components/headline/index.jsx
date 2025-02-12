@@ -16,7 +16,7 @@ export default function HeadlineSlider() {
   const swiperRef = useRef(null); // Ref to store Swiper instance
 
   return (
-    <div className="flex items-center border border-gray-300 rounded-lg mb-5 overflow-hidden w-full">
+    <div className="flex items-center border  border-gray-300 rounded-lg my-3 overflow-hidden w-full">
       {/* Title Box */}
       <div className="bg-green-600 text-white px-4 py-2 font-bold">শিরোনাম</div>
 
