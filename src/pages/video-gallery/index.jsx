@@ -1,7 +1,10 @@
+import SingelCart from "@/components/video-gallary/singelCart";
+import VideoSmallCart from "@/components/video-gallary/smallCart";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
-
+import { MdKeyboardDoubleArrowRight } from "react-icons/md";
+ 
 const VideoGallery = () => {
   const [categoryName, setCategroyName] = useState("স্বাস্থ্য");
   const subCategorydata = [
@@ -109,17 +112,17 @@ const VideoGallery = () => {
             {/* First card - Spanning 2 columns */}
             <div className="col-span-6 border-b  ">
               <div>
-              <NewsCart />
+              <SingelCart />
               </div>
               
             </div>
 
             {/* Second and Third cards - Normal size */}
             <div className="col-span-3 border-b">
-              <NewsSingleCart />
+              <VideoSmallCart />
             </div>
             <div className="col-span-3 border-b">
-              <NewsSingleCart />
+            <VideoSmallCart />
             </div>
           </div>
         </div>
