@@ -49,7 +49,7 @@ const VideoSection = () => {
       <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-4 mt-4">
         {/* Main Video */}
         {videos.slice(0, 3).map((data, index) => (
-          <Link href={""} className="relative">
+          <Link href={""} className="relative" key={index}>
             <img
               src={videos[0].thumbnail}
               alt={videos[0].title}

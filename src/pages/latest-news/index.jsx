@@ -5,11 +5,11 @@ import React from "react";
 const LatestNews = () => {
   return (
     <div className="container-custom">
-      <h1 className="text-[#FF8C00] text-xl py-5 ">সমকাল - সর্বশেষ খবর</h1>
+      <h1 className="text-[#FF8C00] text-xl py-5 ">  সর্বশেষ খবর</h1>
       <section className="grid grid-cols-2 gap-4 ">
         {[1, 3, 4, 5, 4, 5, 6, 76, 5, 45, 43, 3, 4].map((news, i) => (
           <Link
-            href="/some"
+            href="/detail/1"
             className="p-2 pb-5 group flex gap-4 border-b items-center"
             key={i}
           >

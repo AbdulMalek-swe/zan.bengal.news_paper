@@ -53,7 +53,7 @@ const CategoryAllNews = () => {
           ))}
         </div>
 
-        <Link href={"/"} className="flex md:flex-row flex-col gap-4 group lg:w-8/12 w-full">
+        <Link href="/detail/1" className="flex md:flex-row flex-col gap-4 group lg:w-8/12 w-full">
           <div className="w-full aspect-video">
             <Image
               src="/category_image/category.webp"
@@ -86,7 +86,7 @@ const CategoryAllNews = () => {
       <section className="flex gap-4 lg:flex-row flex-col">
         {[1, 3, 4, 5].map((news, i) => (
           <Link
-            href="/some"
+            href="/detail/1"
             className="p-2 bg-gray-100 space-y-6 group"
             key={i}
           >
@@ -112,7 +112,7 @@ const CategoryAllNews = () => {
       <section className="flex  gap-4 flex-col items-center  ">
         {[1, 3, 4, 5].map((news, i) => (
           <Link
-            href="/some"
+          href="/detail/1"
             className="p-2 pb-5   group w-full lg:w-2/4 flex gap-4 border-b items-center"
             key={i}
           >
