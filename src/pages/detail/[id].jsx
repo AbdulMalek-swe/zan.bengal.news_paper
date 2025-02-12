@@ -12,7 +12,7 @@ import MoreNews from "@/components/more-news";
 
 export default function NewsDetail() {
   return (
-    <div className="container-custom px-4 lg:px-20 py-10">
+    <div className="container-custom  py-10">
       {/* Main Content */}
       <div className="grid grid-cols-1 lg:grid-cols-3 items-start gap-10">
         {/* News Article */}

@@ -1,6 +1,6 @@
 import FacebookPage from "@/components/faccebook-page/facebookPage";
 import HeadlineSlider from "@/components/headline";
-import NewsLayout from "@/components/news-layout";
+import { Entertainment, NewsLayout } from "@/components/news-layout";
 import VideoSection from "@/components/youtube-video";
 import Image from "next/image";
 import Link from "next/link";
@@ -107,6 +107,7 @@ export default function Home() {
 
       {/* Category section */}
       <NewsLayout/>
+      <Entertainment/>
     </main>
   );
 }
