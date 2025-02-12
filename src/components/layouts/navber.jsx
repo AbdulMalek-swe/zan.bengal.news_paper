@@ -31,7 +31,7 @@ const Navber = () => {
   }, []);
 
   const menuData = [
-    { name: "সর্বশেষ", url: "/online" },
+    { name: "সর্বশেষ", url: "/latest-news" },
     { name: "বাংলাদেশ", url: "/todays-newspaper" },
     { name: "রাজনীতি", url: "/print-version" },
     { name: "সারাদেশ", url: "/sports" },
@@ -44,7 +44,7 @@ const Navber = () => {
   ];
 
   const CategoryData = [
-    { name: "অনলাইন", url: "/online" },
+    { name: "অনলাইন", url: "/latest" },
     { name: "আজকের পত্রিকা", url: "/todays-newspaper" },
     { name: "প্রিন্ট সংস্করণ", url: "/print-version" },
     { name: "খেলা", url: "/sports" },

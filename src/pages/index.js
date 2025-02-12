@@ -1,3 +1,4 @@
+import FacebookPage from "@/components/faccebook-page/facebookPage";
 import HeadlineSlider from "@/components/headline";
 import { Entertainment, NewsLayout } from "@/components/news-layout";
 import VideoSection from "@/components/youtube-video";
@@ -92,55 +93,12 @@ export default function Home() {
         </div>
 
         {/* Sidebar */}
-        <div className="flex flex-col border-t-2 border-yellow-500 py-3 lg:w-1/4 w-full">
-          <h2 className="text-xl font-bold border-b pb-2">সম্পাদকীয় ও মতামত</h2>
+        {/* facebook use here  */}
+        <div >
 
-          {/* Featured Article */}
-          <Link href={'detail/1'} className="flex flex-col items-start pb-4 mb-4 border-b">
-            <div className="w-full flex justify-center">
-              <Image
-                src="/images/img.webp"
-                alt="Author Illustration"
-                width={250}
-                height={250}
-                className="object-contain"
-              />
-            </div>
-
-            <p className="text-sm text-[#C1873E] font-semibold mt-2 flex items-center">
-              <span className="text-xl mr-1">↗</span> মাহবুব আজিজ
-            </p>
-
-            <h2 className="text-lg font-bold text-red-600">
-              উচ্চারণের বিপরীতে
-              <span className="text-yellow-600"> / বুলডোজার শোভাযাত্রা,</span>
-            </h2>
-
-            <p className="text-yellow-600">আইনের শাসন ও নির্বিকার সরকার</p>
-          </Link>
-
-          {/* Additional Articles */}
-          <div className="space-y-6 flex-1">
-            {newsItems.map((item, index) => (
-              <Link href={'detail/1'} key={index} className="flex gap-4 border-b pb-4">
-                <div className="flex-1 flex flex-col justify-between">
-                  <p className="text-sm text-gray-500">{item.author}</p>
-                  <h3 className="font-bold text-red-600">{item.title}</h3>
-                  <p className="text-gray-700">{item.description}</p>
-                </div>
-                <div className="w-[90px] h-[90px] flex-shrink-0">
-                  <Image
-                    src={item.image}
-                    alt={item.title}
-                    width={90}
-                    height={90}
-                    className="rounded object-cover w-full h-full"
-                  />
-                </div>
-              </Link>
-            ))}
-          </div>
+          <FacebookPage/>
         </div>
+
       </div>
 
       {/* video section */}
