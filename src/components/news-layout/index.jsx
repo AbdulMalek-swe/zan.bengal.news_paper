@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { FaChevronDown } from "react-icons/fa";
+import { FaCaretRight, FaChevronDown } from "react-icons/fa";
 import Link from "next/link";
 
 const articles = [
@@ -126,24 +126,25 @@ export const Entertainment = () => {
         {/* Main News Section */}
 
         <div className="md:col-span-2 border-e pe-2  ">
-        <div className="relative  mb-3  ">
-            <Image height={300} width={600}
+          <div className="relative  mb-3  ">
+            <Image
+              height={300}
+              width={600}
               src="/images/img.webp"
               alt="Main News"
-            
               className="rounded-md w-full h-full object-cover"
             />
           </div>
           <div className="border-b py-2">
-          <h3 className="text-lg font-semibold">৬ তারকার নাটকের দাম</h3>
-          <p className="text-gray-700 mt-2">
-            শাহরুখ খানসহ বড় তারকাদের নাটকের দাম নিয়ে বিস্তারিত বড় তারকাদের
-            নাটকের দাম নিয়ে বিস্তারিত বড় তারকাদের নাটকের দাম নিয়ে বিস্তারিতবড়
-            তারকাদের নাটকের দাম নিয়ে বিস্তারিতবড় তারকাদের নাটকের দাম নিয়ে
-            বিস্তারিতবড় তারকাদের নাটকের দাম নিয়ে বিস্তারিতবড় তারকাদের নাটকের দাম
-            নিয়ে বিস্তারিতবড় তারকাদের নাটকের দাম নিয়ে বিস্তারিতবড় তারকাদের
-            নাটকের দাম নিয়ে বিস্তারিত...
-          </p>
+            <h3 className="text-lg font-semibold">৬ তারকার নাটকের দাম</h3>
+            <p className="text-gray-700 mt-2">
+              শাহরুখ খানসহ বড় তারকাদের নাটকের দাম নিয়ে বিস্তারিত বড় তারকাদের
+              নাটকের দাম নিয়ে বিস্তারিত বড় তারকাদের নাটকের দাম নিয়ে বিস্তারিতবড়
+              তারকাদের নাটকের দাম নিয়ে বিস্তারিতবড় তারকাদের নাটকের দাম নিয়ে
+              বিস্তারিতবড় তারকাদের নাটকের দাম নিয়ে বিস্তারিতবড় তারকাদের নাটকের
+              দাম নিয়ে বিস্তারিতবড় তারকাদের নাটকের দাম নিয়ে বিস্তারিতবড় তারকাদের
+              নাটকের দাম নিয়ে বিস্তারিত...
+            </p>
           </div>
         </div>
 
@@ -151,7 +152,10 @@ export const Entertainment = () => {
         <div className=" rounded-md">
           <div className="space-y-4">
             {[...Array(2)].map((_, index) => (
-              <div key={index} className="grid grid-cols-1 gap-2 border-b pb-2 ">
+              <div
+                key={index}
+                className="grid grid-cols-1 gap-2 border-b pb-2 "
+              >
                 <Image
                   src="/images/img.webp"
                   width={80}
@@ -185,6 +189,85 @@ export const Entertainment = () => {
           ))}
         </div>
       </div>
+    </div>
+  );
+};
+export const ThreeCategory = () => {
+  const newsData = [
+    {
+      category: "মতামত",
+      title: "দুর্বল প্যারেন্টিংয়ের ফাঁদে আগামী প্রজন্ম",
+      description:
+        "গত কদিন ধরে দেশের সোশ্যাল মিডিয়াসহ মেইনস্ট্রিম সব মিডিয়ার অন্যতম একটি সংবাদ শিরোনাম ছিল...",
+      image: "/images/img.webp",
+      date: "১১ ফেব্রুয়ারি ২০২৫, ১২:০০ এএম",
+      links: [
+        "আদালতের ভূমিকা-সংস্কৃতি গড়ার অতন্দ্র যাত্রা",
+        "সচেতনতা বৃদ্ধি এবং সমাধানের জন্য আহ্বান",
+        "কেরানী পথ নেই",
+        "কার দায়িত্ব বেশি: বর্তমানের পরিস্থিতি ও বাংলাদেশের ভবিষ্যৎ",
+      ],
+    },
+    {
+      category: "প্রবাস",
+      title: "মেক্সিকোতে রপ্তানি বিলিয়ন ডলারে উন্নীত করাই লক্ষ্য...",
+      description:
+        "মেক্সিকোতে বাংলাদেশের রপ্তানি ১ বিলিয়ন মার্কিন ডলারে উন্নীত করার লক্ষ্য নির্ধারণ করা হয়েছে...",
+      image: "/images/img.webp",
+      date: "১০ ফেব্রুয়ারি ২০২৫, ০৭:৪৫ এএম",
+      links: [
+        "পিয়ানিস্ট নামাজীর ইসলামি স্বপ্নচারী: অল্পনা নাগরিক",
+        "কুমিল্লাতে বৈঠক ভিজার মধ্যে রয়েছে ক্রমবর্ধমান প্রবাহ",
+        "গোয়েন্দাগিরি এসোসিয়েশন নৈতিক মূল্যায়নের সম্মানিত পেট ডুবে গেছে",
+        "বাংলাদেশি মেক্সিকোতে বসবাস ১৮% জুড়ে আছে",
+      ],
+    },
+    {
+      category: "চাকরি",
+      title: "প্রাথমিকের সুপারিশপ্রাপ্ত সহকারী শিক্ষকদের...",
+      description:
+        "প্রাথমিক বিদ্যালয়ের সহকারী শিক্ষক পদে সুপারিশ পাওয়ার পর নিয়োগ বাতিল হওয়ার প্রতিবাদে...",
+      image: "/images/img.webp",
+      date: "১১ ফেব্রুয়ারি ২০২৫, ০৪:৩১ পিএম",
+      links: [
+        "৫ জানুয়ারি চাকরি দিচ্ছে ডেক্স",
+        "অভিজ্ঞতা ছাড়াই সিটি ব্যাংকে নিয়োগ",
+        "সেনা পাসের মাধ্যমে বিশ্ববিদ্যালয়ে নিয়োগ বিজ্ঞপ্তি",
+        "সেলসম্যান নিয়োগ দেবে নতুন ফার্ম, থাকছে না বসবাসের বাধা",
+      ],
+    },
+  ];
+
+  return (
+    <div className="container mx-auto  py-6 grid grid-cols-1 md:grid-cols-3 gap-6">
+      {newsData.map((news, index) => (
+        <div key={index} className="bg-white shadow-md rounded-md p-4">
+          <div className="flex items-center gap-2 text-lg font-bold pb-4  ">
+            <span className=" text-gray-700 bg-white shadow-xl px-3 py-1 rounded">
+              {news?.category}{" "}
+            </span>
+            <FaCaretRight className="text-red-500" />
+          </div>
+          <Image
+            src={news.image}
+            width={400}
+            height={250}
+            className="rounded-md"
+            alt={news.title}
+          />
+          <h3 className="text-lg font-semibold mt-3">{news.title}</h3>
+          <p className="text-gray-700 mt-2">{news.description}</p>
+          <p className="text-gray-500 text-sm mt-2">{news.date}</p>
+          <ul className="mt-4 space-y-2  text-base">
+            {news.links.map((link, idx) => (
+              <Link href={''} key={idx} className="flex py-5 border-b items-center gap-2">
+                <span className="h-2 w-2 bg-red-600 rounded-full"></span>
+                {link}
+              </Link>
+            ))}
+          </ul>
+        </div>
+      ))}
     </div>
   );
 };
