@@ -40,10 +40,10 @@ const CategoryAllNews = () => {
       {/* news header section  */}
       <section>
         <h1 className="text-[#FF8C00] text-xl py-5 ">{categoryName}</h1>
-        <div className="flex gap-4 pb-6">
+        <div className="flex gap-4 pb-6 flex-wrap">
           {subCategorydata.map((sub_cat, index) => (
             <div
-              className="flex gap-1 items-center hover:text-[#FF8C00] cursor-pointer "
+              className="flex gap-2 items-center hover:text-[#FF8C00] cursor-pointer "
               key={sub_cat?.categoyr_id}
               onClick={() => setCategroyName(sub_cat?.category_name)}
             >
@@ -53,16 +53,16 @@ const CategoryAllNews = () => {
           ))}
         </div>
 
-        <div className="flex gap-4 group">
-          <div className="w-4/12">
+        <Link href={"/"} className="flex md:flex-row flex-col gap-4 group lg:w-8/12 w-full">
+          <div className="w-full aspect-video">
             <Image
               src="/category_image/category.webp"
-              width={300}
-              height={300}
-              className="w-full h-full"
+              width={800}
+              height={450}
+              className="w-full h-full aspect-video"
             />
           </div>
-          <div className="w-4/12">
+          <div className="w-full">
             <h1 className="text-[30px] group-hover:text-[#ff8c00b0] ">
               ডিসেম্বর মাস ধরে জাতীয় নির্বাচনের প্রস্তুতি নেওয়া হচ্ছে: ইসি
               সানাউল্লাহ
@@ -80,10 +80,10 @@ const CategoryAllNews = () => {
               </span>
             </div>
           </div>
-        </div>
+        </Link>
       </section>
       {/* news cart  */}
-      <section className="flex gap-4 ">
+      <section className="flex gap-4 lg:flex-row flex-col">
         {[1, 3, 4, 5].map((news, i) => (
           <Link
             href="/some"
@@ -93,8 +93,8 @@ const CategoryAllNews = () => {
             <Image
               src={"/images/img.webp"}
               alt="loading"
-              width={300}
-              height={300}
+              width={800}
+              height={450}
               className="rounded-lg w-full"
             />
             <h2 className="text-gray-600 group-hover:text-[#FF8C00] text-xl pb-4">
@@ -109,33 +109,35 @@ const CategoryAllNews = () => {
       </section>
       {/* vertical news card section
        */}
-      <section className="flex gap-4 flex-col items-center  ">
+      <section className="flex  gap-4 flex-col items-center  ">
         {[1, 3, 4, 5].map((news, i) => (
           <Link
             href="/some"
-            className="p-2 pb-5   group w-2/4 flex border-b items-center"
+            className="p-2 pb-5   group w-full lg:w-2/4 flex gap-4 border-b items-center"
             key={i}
           >
-            <div>
-              <h2 className="text-gray-600 group-hover:text-[#FF8C00] text-xl pb-4">
+            <div className="w-full">
+              <h2 className="text-gray-600 group-hover:text-[#FF8C00] text-xl pb-4 text-base md:text-xl">
                 শহীদ পরিবার ও আহতদের কর্মসংস্থান নিয়ে যা বললেন উপদেষ্টা নাহিদ
               </h2>
-              <span className="text-gray-500 pb-3 block">
+              <span className="text-gray-500 pb-3 hidden md:block">
                 জুলাই গণঅভ্যুত্থানে ছাত্র-জনতা শহীদ পরিবার ও আহতদের কর্মসংস্থান
                 নিয়ে কথা বলেছেন অন্তর্বর্তী সরকারের তথ্য ও সম্প্রচার
                 মন্ত্রণালয়ের উপদেষ্টা
               </span>
-              <span className="text-gray-500">
+              <span className="text-gray-500 hidden md:block">
                 আপডেটঃ ১১ ফেব্রুয়ারি ২০২৫ | ১৪:২৪
               </span>
             </div>
+            <div className="aspect-video w-full">
             <Image
               src={"/images/img.webp"}
               alt="loading"
-              width={300}
-              height={300}
+              width={800}
+              height={450}
               className="rounded-lg w-full"
             />
+            </div>
           </Link>
         ))}
         <button className="px-4 py-2  bg-[#FF8C00] rounded-lg">আরও</button>

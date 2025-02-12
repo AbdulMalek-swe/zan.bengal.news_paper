@@ -1,5 +1,9 @@
+import FacebookPage from "@/components/faccebook-page/facebookPage";
 import HeadlineSlider from "@/components/headline";
+import { Entertainment, NewsLayout } from "@/components/news-layout";
+import VideoSection from "@/components/youtube-video";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   const newsItems = [
@@ -105,7 +109,7 @@ export default function Home() {
         {/* Main News Section */}
         <div className="flex-1 flex flex-col gap-4 h-full">
           {/* Headline News */}
-          <div className="border-b pb-4 flex flex-col lg:flex-row gap-4 items-stretch">
+          <Link href={'detail/1'} className="border-b pb-4 flex flex-col lg:flex-row gap-4 items-stretch">
             <div className="flex-1 flex flex-col justify-between h-full">
               <h1 className="text-xl font-bold text-yellow-600">
               দুদকে পাঠানো রাজউক চেয়ারম্যানের চিঠি নিয়ে তোলপাড়
@@ -125,12 +129,12 @@ export default function Home() {
                 className="w-full h-full object-cover"
               />
             </div>
-          </div>
+          </Link>
 
           {/* Grid News */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-2 ">
             {mainnews.map((item, index) => (
-              <div key={index} className="p-3 flex gap-2 border-b">
+              <Link href={""} key={index} className="p-3 flex gap-2 border-b">
                 <Image
                   src={item?.image}
                   alt="News 1"
@@ -141,7 +145,7 @@ export default function Home() {
                 <h3 className="font-bold mt-2 flex-1">
                 {item?.title}
                 </h3>
-              </div>
+              </Link>
             ))}
           </div>
         </div>
@@ -149,7 +153,7 @@ export default function Home() {
         {/* Middle News Section */}
         <div className="flex flex-col lg:w-1/4 w-full self-stretch">
           {leadnews.map((item, index) => (
-            <div key={index} className="border-b p-3 flex items-stretch gap-2">
+            <Link href={""} key={index} className="border-b p-3 flex items-stretch gap-2">
               <h3 className="font-bold mt-2 flex-1">
                 {item?.title}
               </h3>
@@ -162,61 +166,26 @@ export default function Home() {
                   className="w-full h-full object-cover"
                 />
               </div>
-            </div>
+            </Link>
           ))}
         </div>
 
         {/* Sidebar */}
-        <div className="flex flex-col border-t-2 border-yellow-500 py-3 lg:w-1/4 w-full">
-          <h2 className="text-xl font-bold border-b pb-2">সম্পাদকীয় ও মতামত</h2>
+        {/* facebook use here  */}
+        <div >
 
-          {/* Featured Article */}
-          <div className="flex flex-col items-start pb-4 mb-4 border-b">
-            <div className="w-full flex justify-center">
-              <Image
-                src="/images/img.webp"
-                alt="Author Illustration"
-                width={250}
-                height={250}
-                className="object-contain"
-              />
-            </div>
-
-            <p className="text-sm text-[#C1873E] font-semibold mt-2 flex items-center">
-              <span className="text-xl mr-1">↗</span> মাহবুব আজিজ
-            </p>
-
-            <h2 className="text-lg font-bold text-red-600">
-              উচ্চারণের বিপরীতে
-              <span className="text-yellow-600"> / বুলডোজার শোভাযাত্রা,</span>
-            </h2>
-
-            <p className="text-yellow-600">আইনের শাসন ও নির্বিকার সরকার</p>
-          </div>
-
-          {/* Additional Articles */}
-          <div className="space-y-6 flex-1">
-            {newsItems.map((item, index) => (
-              <div key={index} className="flex gap-4 border-b pb-4">
-                <div className="flex-1 flex flex-col justify-between">
-                  <p className="text-sm text-gray-500">{item.author}</p>
-                  <h3 className="font-bold text-red-600">{item.title}</h3>
-                  <p className="text-gray-700">{item.description}</p>
-                </div>
-                <div className="w-[90px] h-[90px] flex-shrink-0">
-                  <Image
-                    src={item.image}
-                    alt={item.title}
-                    width={90}
-                    height={90}
-                    className="rounded object-cover w-full h-full"
-                  />
-                </div>
-              </div>
-            ))}
-          </div>
+          <FacebookPage/>
         </div>
+
       </div>
+
+      {/* video section */}
+      <VideoSection/>
+
+
+      {/* Category section */}
+      <NewsLayout/>
+      <Entertainment/>
     </main>
   );
 }
