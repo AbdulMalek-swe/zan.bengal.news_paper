@@ -466,9 +466,9 @@ const Navber = () => {
               : "border-b-2  border-red-400 container-custom"
           } `}
         >
-          {isScrolled && (
+        
             <Image height={50} width={120} src={logo} alt="Logo" />
-          )}
+    
           <ul className="flex space-x-3">
             {visibleItems.map((item, index) => (
               <li key={index}>
