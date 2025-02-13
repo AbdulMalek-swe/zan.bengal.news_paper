@@ -30,10 +30,9 @@ const FacebookPage = () => {
   return (
     <div>
       <div
-        className="fb-page"
+        className="fb-page w-full lg:w-[350px]"
         data-href="https://www.facebook.com/Bengalchannel24.bd/" // Replace with your Facebook page URL
         data-tabs="timeline"
-        data-width="300"
         data-height="600"
         data-small-header="false"
         data-adapt-container-width="true"

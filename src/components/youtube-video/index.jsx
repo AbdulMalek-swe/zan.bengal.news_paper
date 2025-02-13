@@ -49,7 +49,8 @@ const VideoSection = () => {
       <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-4 mt-4">
         {/* Main Video */}
         {videos.slice(0, 3).map((data, index) => (
-          <Link href={""} className="relative" key={index}>
+          <Link href={""} key={index}>
+            <div className="relative">
             <img
               src={data?.thumbnail}
               alt={data?.title}
@@ -59,6 +60,7 @@ const VideoSection = () => {
               <div className="border-2 border-white hover:bg-red-500 p-3 rounded-full flex justify-center items-center">
                 <FaPlay className="text-white text-2xl" />
               </div>
+            </div>
             </div>
 
             <p className="mt-2 text-sm font-semibold">{data?.title}</p>
@@ -91,7 +93,8 @@ const VideoSection = () => {
         >
           {videos.map((video) => (
             <SwiperSlide key={video.id}>
-              <Link href={""} className="relative">
+              <Link href={""} className="">
+                <div className="relative">
                 <img
                   src={video.thumbnail}
                   alt={video.title}
@@ -101,6 +104,7 @@ const VideoSection = () => {
                   <div className="border-2 border-white hover:bg-red-500 p-3 rounded-full flex justify-center items-center">
                     <FaPlay className="text-white text-2xl" />
                   </div>
+                </div>
                 </div>
                 <p className="mt-2 text-xs font-semibold">{video.title}</p>
               </Link>

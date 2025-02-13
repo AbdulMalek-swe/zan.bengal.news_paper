@@ -9,6 +9,7 @@ import {
 import { BsMessenger } from "react-icons/bs";
 import { IoIosAdd, IoIosRemove } from "react-icons/io";
 import MoreNews from "@/components/more-news";
+import { MdOutlineKeyboardDoubleArrowRight } from "react-icons/md";
 
 export default function NewsDetail() {
   return (
@@ -17,14 +18,17 @@ export default function NewsDetail() {
       <div className="grid grid-cols-1 lg:grid-cols-3 items-start gap-10">
         {/* News Article */}
         <div className="lg:col-span-2">
-          <nav className="text-gray-600 text-sm flex items-center gap-2 mb-4">
+          <nav className="text-gray-600 text-sm flex flex-col md:flex-row items-start justify-start gap-2 mb-4">
+            <div className="flex items-center gap-1">
             <FaHome className="text-gray-500" />
+            <MdOutlineKeyboardDoubleArrowRight className="text-xl" />
             <span className="text-blue-600">বাংলাদেশ</span>
-            <span> »</span>
+            </div>
+            <div className="flex items-center gap-1"><MdOutlineKeyboardDoubleArrowRight className="text-xl" />
             <span>
               ৬ দফা দাবিতে শহীদ মিনারে চাকরিচ্যুত বিডিআর সদস্যদের অবস্থান
               কর্মসূচি
-            </span>
+            </span></div>
           </nav>
           <h1 className="text-2xl font-bold mb-4">
             ৬ দফা দাবিতে শহীদ মিনারে চাকরিচ্যুত বিডিআর সদস্যদের অবস্থান কর্মসূচি

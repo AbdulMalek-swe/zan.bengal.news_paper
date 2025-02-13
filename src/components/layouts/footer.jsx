@@ -7,9 +7,9 @@ import Link from "next/link";
 const Footer = () => {
   return (
     <footer className="bg-white text-black py-8   container-custom ">
-      <div className=" mx-auto flex flex-col lg:flex-row justify-between items-center lg:gap-40">
+      <div className=" mx-auto flex flex-col  lg:flex-row justify-between items-center lg:gap-40">
         {/* Left Side: Logo & Address */}
-        <div className="flex items-center   gap-4 justify-between md:flex-row  md:space-x-4">
+        <div className="flex items-center  flex-col  gap-4  justify-start md:justify-between md:flex-row  md:space-x-4">
           {/* Logo */}
           <Link href="/">
             <Image src={image} alt="Logo" width={190} height={150} />
@@ -35,7 +35,7 @@ const Footer = () => {
 
         </div>
 
-        <div className="mt-6 lg:mt-0 flex flex-col items-center">
+        <div className="mt-6 lg:mt-0 flex flex-col b items-center">
           {/* Social Icons */}
           <div className="flex space-x-4">
             <div className="w-10 h-10 flex items-center justify-center border border-gray-400 rounded-full text-gray-400 hover:bg-[#0064d1] hover:text-white cursor-pointer">

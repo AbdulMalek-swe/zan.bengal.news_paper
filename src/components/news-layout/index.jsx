@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { FaChevronDown } from "react-icons/fa";
+import { FaCaretRight, FaChevronDown } from "react-icons/fa";
 import Link from "next/link";
 
 const articles = [
@@ -78,14 +78,14 @@ export const NewsLayout = () => {
               <Link
                 key={article.id}
                 href="#"
-                className="flex items-center border-b pb-4 gap-3"
+                className="flex flex-col lg:flex-row items-center border-b pb-4 gap-3"
               >
                 <Image
                   src={article.image}
                   alt={article.title}
                   width={120}
                   height={80}
-                  className="rounded-lg w-[120px] h-[80px] object-cover"
+                  className="  object-cover"
                 />
                 <p className="text-sm font-medium hover:text-red-500">
                   {article.title}
@@ -158,7 +158,7 @@ export const Entertainment = () => {
         <span className="bg-red-500 text-white px-3 py-1 rounded">বিনোদন </span>
         <FaChevronDown className="text-red-500" />
       </div>
-      <div className=" py-4 grid grid-cols-1 md:grid-cols-3 gap-4 border-b-">
+      <div className=" py-4 grid grid-cols-1 md:grid-cols-3 gap-4 border-b">
         {/* Main News Section */}
 
         <div className="md:col-span-2 border-e pe-2  ">
@@ -166,20 +166,19 @@ export const Entertainment = () => {
             <Image height={450} width={800}
               src="/entertainment/1.jpeg"
               alt="Main News"
-            
               className="rounded-md w-full h-full object-cover"
             />
           </div>
           <div className="border-b py-2">
-          <h3 className="text-lg font-semibold">৬ তারকার নাটকের দাম</h3>
-          <p className="text-gray-700 mt-2">
-            শাহরুখ খানসহ বড় তারকাদের নাটকের দাম নিয়ে বিস্তারিত বড় তারকাদের
-            নাটকের দাম নিয়ে বিস্তারিত বড় তারকাদের নাটকের দাম নিয়ে বিস্তারিতবড়
-            তারকাদের নাটকের দাম নিয়ে বিস্তারিতবড় তারকাদের নাটকের দাম নিয়ে
-            বিস্তারিতবড় তারকাদের নাটকের দাম নিয়ে বিস্তারিতবড় তারকাদের নাটকের দাম
-            নিয়ে বিস্তারিতবড় তারকাদের নাটকের দাম নিয়ে বিস্তারিতবড় তারকাদের
-            নাটকের দাম নিয়ে বিস্তারিত...
-          </p>
+            <h3 className="text-lg font-semibold">৬ তারকার নাটকের দাম</h3>
+            <p className="text-gray-700 mt-2">
+              শাহরুখ খানসহ বড় তারকাদের নাটকের দাম নিয়ে বিস্তারিত বড় তারকাদের
+              নাটকের দাম নিয়ে বিস্তারিত বড় তারকাদের নাটকের দাম নিয়ে বিস্তারিতবড়
+              তারকাদের নাটকের দাম নিয়ে বিস্তারিতবড় তারকাদের নাটকের দাম নিয়ে
+              বিস্তারিতবড় তারকাদের নাটকের দাম নিয়ে বিস্তারিতবড় তারকাদের নাটকের
+              দাম নিয়ে বিস্তারিতবড় তারকাদের নাটকের দাম নিয়ে বিস্তারিতবড় তারকাদের
+              নাটকের দাম নিয়ে বিস্তারিত...
+            </p>
           </div>
         </div>
 
@@ -192,7 +191,7 @@ export const Entertainment = () => {
                   src= {data?.image}
                   width={800}
                   height={450}
-                  className="w-full"
+                  className="w-full h-44"
                   alt="News"
                 />
                 <div>
@@ -206,21 +205,100 @@ export const Entertainment = () => {
         {/* Bottom News Cards */}
         <div className="md:col-span-3 grid grid-cols-1 md:grid-cols-3 gap-4">
           {secondData.map((item, index) => (
-            <div key={index} className=" p-3 flex gap-2 border-e aspect-video ">
+            <Link href={''} key={index} className=" p-3 flex flex-col lg:flex-row gap-2 border-e aspect-video ">
               <Image
                 src= {item?.image}
                 width={800}
                 height={450}
-                className="aspect-video w-1/2 h-[250px]"
+                className="aspect-video lg:w-1/2 w-full  h-44"
                 alt="News"
               />
-              <h4 className="text-base mt-2 w-1/2">
+              <h4 className="text-base mt-2 ">
                  {item?.title}
               </h4>
-            </div>
+            </Link>
           ))}
         </div>
       </div>
+    </div>
+  );
+};
+export const ThreeCategory = () => {
+  const newsData = [
+    {
+      category: "মতামত",
+      title: "দুর্বল প্যারেন্টিংয়ের ফাঁদে আগামী প্রজন্ম",
+      description:
+        "গত কদিন ধরে দেশের সোশ্যাল মিডিয়াসহ মেইনস্ট্রিম সব মিডিয়ার অন্যতম একটি সংবাদ শিরোনাম ছিল...",
+      image: "/images/img.webp",
+      date: "১১ ফেব্রুয়ারি ২০২৫, ১২:০০ এএম",
+      links: [
+        "আদালতের ভূমিকা-সংস্কৃতি গড়ার অতন্দ্র যাত্রা",
+        "সচেতনতা বৃদ্ধি এবং সমাধানের জন্য আহ্বান",
+        "কেরানী পথ নেই",
+        "কার দায়িত্ব বেশি: বর্তমানের পরিস্থিতি ও বাংলাদেশের ভবিষ্যৎ",
+      ],
+    },
+    {
+      category: "প্রবাস",
+      title: "মেক্সিকোতে রপ্তানি বিলিয়ন ডলারে উন্নীত করাই লক্ষ্য...",
+      description:
+        "মেক্সিকোতে বাংলাদেশের রপ্তানি ১ বিলিয়ন মার্কিন ডলারে উন্নীত করার লক্ষ্য নির্ধারণ করা হয়েছে...",
+      image: "/images/img.webp",
+      date: "১০ ফেব্রুয়ারি ২০২৫, ০৭:৪৫ এএম",
+      links: [
+        "পিয়ানিস্ট নামাজীর ইসলামি স্বপ্নচারী: অল্পনা নাগরিক",
+        "কুমিল্লাতে বৈঠক ভিজার মধ্যে রয়েছে ক্রমবর্ধমান প্রবাহ",
+        "গোয়েন্দাগিরি এসোসিয়েশন নৈতিক মূল্যায়নের সম্মানিত পেট ডুবে গেছে",
+        "বাংলাদেশি মেক্সিকোতে বসবাস ১৮% জুড়ে আছে",
+      ],
+    },
+    {
+      category: "চাকরি",
+      title: "প্রাথমিকের সুপারিশপ্রাপ্ত সহকারী শিক্ষকদের...",
+      description:
+        "প্রাথমিক বিদ্যালয়ের সহকারী শিক্ষক পদে সুপারিশ পাওয়ার পর নিয়োগ বাতিল হওয়ার প্রতিবাদে...",
+      image: "/images/img.webp",
+      date: "১১ ফেব্রুয়ারি ২০২৫, ০৪:৩১ পিএম",
+      links: [
+        "৫ জানুয়ারি চাকরি দিচ্ছে ডেক্স",
+        "অভিজ্ঞতা ছাড়াই সিটি ব্যাংকে নিয়োগ",
+        "সেনা পাসের মাধ্যমে বিশ্ববিদ্যালয়ে নিয়োগ বিজ্ঞপ্তি",
+        "সেলসম্যান নিয়োগ দেবে নতুন ফার্ম, থাকছে না বসবাসের বাধা",
+      ],
+    },
+  ];
+
+  return (
+    <div className="container mx-auto  py-6 grid grid-cols-1 md:grid-cols-3 gap-6">
+      {newsData.map((news, index) => (
+        <div key={index} className="bg-white lg:shadow-md rounded-md p-4">
+          <div className="flex items-center gap-2 text-lg font-bold pb-4  ">
+            <span className=" text-gray-700 bg-white shadow-xl px-3 py-1 rounded">
+              {news?.category}{" "}
+            </span>
+            <FaCaretRight className="text-red-500" />
+          </div>
+          <Image
+            src={news.image}
+            width={400}
+            height={250}
+            className="rounded-md"
+            alt={news.title}
+          />
+          <h3 className="text-lg font-semibold mt-3">{news.title}</h3>
+          <p className="text-gray-700 mt-2">{news.description}</p>
+          <p className="text-gray-500 text-sm mt-2">{news.date}</p>
+          <ul className="mt-4 space-y-2  text-base">
+            {news.links.map((link, idx) => (
+              <Link href={''} key={idx} className="flex py-5 border-b items-center gap-2">
+                <span className="h-2 w-2 bg-red-600 rounded-full"></span>
+                {link}
+              </Link>
+            ))}
+          </ul>
+        </div>
+      ))}
     </div>
   );
 };
