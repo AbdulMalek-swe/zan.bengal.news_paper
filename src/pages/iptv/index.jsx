@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 
 const API_KEY = "AIzaSyCJ-WjACDOpf1n3rmtWfNg4MHA_FA1dyj8"; // Replace with your API key
-const CHANNEL_ID = "UCPkL5tZ7mOLC0M2cbMWpAfA"; // Replace with your YouTube channel ID
+const CHANNEL_ID = "UCUYybxoXtaMGjLddh7IErrA"; // Replace with your YouTube channel ID
 const MAX_RESULTS = 10;
 
 const Iptv = () => {

@@ -8,7 +8,7 @@ const articles = [
     title: "আমাদের মস্তিষ্কে রিল-শর্টসের কতটা প্রভাব ফেলেছে জানেন?",
     description:
       "বর্তমানে এমন মানুষ কি খুঁজে পাওয়া যাবে যে, সোশ্যাল মিডিয়া ফেসবুক, ইনস্টাগ্রাম বা ইউটিউবে রিল বা শর্টস দেখা ছাড়া একটি দিন কাটিয়েছেন?",
-    image: "/images/img.webp",
+    image: "/lifestyle/1.webp",
     time: "১১ ফেব্রুয়ারি ২০২৫, ০২:৩৬ পিএম",
   },
 ];
@@ -17,25 +17,25 @@ const sidebarArticles = [
   {
     id: 2,
     title: "আজ ‘প্রমিস ডে’, প্রতিজ্ঞা করার দিন",
-    image: "/images/img.webp",
+    image: "/lifestyle/3.webp",
   },
-  { id: 3, title: "হেসব কারণে দেখে বাঁধে যৌনরোগ", image: "/images/img.webp" },
+  { id: 3, title: "হেসব কারণে দেখে বাঁধে যৌনরোগ", image: "/lifestyle/4.jpeg", },
   {
     id: 4,
     title: "শিশুরা হেসব কারণে ক্যানসারে আক্রান্ত হয়",
-    image: "/images/img.webp",
+    image: "/lifestyle/5.jpeg",
   },
   {
     id: 5,
     title: "জরায়ু ক্যানসারে আক্রান্ত কি না বুঝে নিন ৯ লক্ষণ",
-    image: "/images/img.webp",
+    image: "/lifestyle/6.jpeg",
   },
 ];
 
 const rightFeature = {
   id: 6,
   title: "নারী নাকি পুরুষ বেশি কথা বলেন?",
-  image: "/images/img.webp",
+  image: "/lifestyle/2.jpg",
 };
 
 export const NewsLayout = () => {
@@ -116,6 +116,42 @@ export const NewsLayout = () => {
 };
 
 export const Entertainment = () => {
+  const eterTainmentData = [
+    {
+      id: 1,
+      image:"/entertainment/3.webp",
+      title: "রামচরণের দাম্পত্য জীবন নিয়ে বাবা চিরঞ্জীবীর মন্তব্য, বিতর্কের ঝড়",
+      description:""
+    },
+    {
+      id: 1,
+      image:"/entertainment/4.jpg",
+      title: "হামলার পর প্রথমবার সাংবাদিকদের যা জানালেন সাইফ",
+      description:""
+    },
+    
+  ]
+  const secondData = [
+    {
+      id: 1,
+      image:"/entertainment/5.webp",
+      title: "আমি বাংলায় গান গাই’ গানের শিল্পীর শারীরিক অবস্থার অবনতি",
+      description:""
+    },
+    {
+      id: 2,
+      image:"/entertainment/6.png",
+      title: "গল্প এখন হয়ে গেছে কনটেন্ট: আবুল হায়াত",
+      description:""
+    },
+    {
+      id: 3,
+      image:"/entertainment/7.jpg",
+      title: "বিমান থেকে স্টান্ট করতে গিয়ে ‘অবচেতন’ দশা টম ক্রুজের",
+      description:""
+    } 
+   
+  ]
   return (
     <div className="bg-green-100 p-2">
       <div className="flex items-center gap-2 text-lg font-bold  ">
@@ -127,8 +163,8 @@ export const Entertainment = () => {
 
         <div className="md:col-span-2 border-e pe-2  ">
         <div className="relative  mb-3  ">
-            <Image height={300} width={600}
-              src="/images/img.webp"
+            <Image height={450} width={800}
+              src="/entertainment/1.jpeg"
               alt="Main News"
             
               className="rounded-md w-full h-full object-cover"
@@ -150,17 +186,17 @@ export const Entertainment = () => {
         {/* Sidebar */}
         <div className=" rounded-md">
           <div className="space-y-4">
-            {[...Array(2)].map((_, index) => (
+            {eterTainmentData.map((data, index) => (
               <div key={index} className="grid grid-cols-1 gap-2 border-b pb-2 ">
                 <Image
-                  src="/images/img.webp"
-                  width={80}
-                  height={50}
+                  src= {data?.image}
+                  width={800}
+                  height={450}
                   className="w-full"
                   alt="News"
                 />
                 <div>
-                  <h4 className="font-medium">কারিয়ের আনন্দের দিন</h4>
+                  <h4 className="font-medium">{data?.title}</h4>
                 </div>
               </div>
             ))}
@@ -169,17 +205,17 @@ export const Entertainment = () => {
 
         {/* Bottom News Cards */}
         <div className="md:col-span-3 grid grid-cols-1 md:grid-cols-3 gap-4">
-          {[...Array(3)].map((_, index) => (
-            <div key={index} className=" p-3 flex gap-2 border-e">
+          {secondData.map((item, index) => (
+            <div key={index} className=" p-3 flex gap-2 border-e aspect-video ">
               <Image
-                src="/images/img.webp"
-                width={150}
-                height={100}
-                className=""
+                src= {item?.image}
+                width={800}
+                height={450}
+                className="aspect-video w-1/2 h-[250px]"
                 alt="News"
               />
-              <h4 className="text-base mt-2">
-                'হেয়ারার যদি আদনান তারিখের সন্ধান'
+              <h4 className="text-base mt-2 w-1/2">
+                 {item?.title}
               </h4>
             </div>
           ))}
