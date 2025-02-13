@@ -64,13 +64,13 @@ const Navber = () => {
       {/* 🔹 Header (Logo & Date) */}
       <div className="flex items-center container-custom justify-between px-4 pb-2 mt-3">
         <div className="text-center flex-1 px-2">
-          <Image
+         <Link href={'/'}> <Image
             className="mx-auto "
             src={logo}
             alt="Profile Picture"
             width={400}
             height={200}
-          />
+          /></Link>
           <p className="mt-2 hidden md:block text-sm">
             ঢাকা,  মঙ্গলবার, ১১ ফেব্রুয়ারি ২০২৫, ২৮ মাঘ ১৪৩১ বঙ্গাব্দ, ১১ শাবান
             ১৪৪৬ হিঃ
@@ -82,7 +82,7 @@ const Navber = () => {
         </div>
       </div>
       {/* 🔹 Mobile Menu */}
-      <div className="lg:hidden  flex items-center justify-between py-3 px-3  gap-4">
+      <div className="lg:hidden  flex items-center justify-start py-3 px-3  gap-4">
         <button onClick={toggleSidebar} className="text-gray-700 text-3xl">
           <FaBars className="border p-1 text-green-500" />
         </button>
@@ -107,10 +107,10 @@ const Navber = () => {
         }`}
       >
         <div
-          className={`hidden  lg:flex justify-start gap-4  items-center container-custom py-2 border-t border-t-slate-300    ${
+          className={`hidden   lg:flex justify-start gap-4  items-center container-custom py-2 border-t border-t-slate-300    ${
             isScrolled
               ? "border-none "
-              : "border-b-2  border-red-400 container-custom"
+              : "border-b-2  border-red-400 "
           } `}
         >
           {isScrolled && (
@@ -216,7 +216,7 @@ const Navber = () => {
             <SocialIcon
               Icon={FaLinkedinIn}
               hoverColor="hover:bg-blue-700"
-              bgColor="bg-blue-600"
+              bgColor="bg-[#053059]"
               url={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(
                 window.location.href
               )}`}
