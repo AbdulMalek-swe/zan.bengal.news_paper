@@ -183,5 +183,5 @@ export default function Home() {
       <Entertainment/>
       <ThreeCategory/>
     </main>
-  );
+  );  
 }
