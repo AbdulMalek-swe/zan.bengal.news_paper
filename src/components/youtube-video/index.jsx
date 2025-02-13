@@ -12,7 +12,7 @@ import Link from "next/link";
 
 const videos = [
   { id: 1, title: "ব্যাংকে ইমরুল-মোদি বৈঠক?", thumbnail: "/images/modi.jpg" },
-  { id: 2, title: "বেনজীরকে নিয়ে নতুন করে...", thumbnail: "/images/man.gif" },
+  { id: 2, title: "বেনজীরকে নিয়ে নতুন করে...", thumbnail: "/entertainment/4.jpg" },
   {
     id: 3,
     title: "যেভাবে তৈরি হয় মানিকগঞ্জের...",
@@ -21,7 +21,7 @@ const videos = [
   {
     id: 4,
     title: "ভিডিও পরিচালকের দুর্ঘটনার ডাকাতি...",
-    thumbnail: "/images/mahfuz.gif",
+    thumbnail: "/entertainment/2.jpeg",
   },
   {
     id: 5,
