@@ -171,13 +171,13 @@ export default function Home() {
         </div>
         {/* Sidebar */}
         {/* facebook use here  */}
-        <div >
+        <div>
           <FacebookPage/>
         </div>
       </div>
       {/* video section */}
       <VideoSection/>
-      sdfsdfsd
+      {/* sdfsdfsd */}
       {/* Category section */}
       <NewsLayout/>
       <Entertainment/>
