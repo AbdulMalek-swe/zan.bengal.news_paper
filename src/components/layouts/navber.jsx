@@ -216,7 +216,7 @@ const Navber = () => {
             <SocialIcon
               Icon={FaLinkedinIn}
               hoverColor="hover:bg-blue-700"
-              bgColor="bg-blue-600"
+              bgColor="bg-[#053059]"
               url={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(
                 window.location.href
               )}`}
